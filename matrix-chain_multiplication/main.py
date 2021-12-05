@@ -32,6 +32,5 @@ if __name__ == '__main__':
         print(f'A{_ + 1}={p[_]}x{p[_ + 1]}')
 
     dp = [[[float('inf'), 0] for __ in range(0, n)] for _ in range(0, n)]
-    matrix(1, n)
-    print(dp[0][n - 1][0])
+    print(matrix(1, n))
     print(print_optimal_parens(1, n))
