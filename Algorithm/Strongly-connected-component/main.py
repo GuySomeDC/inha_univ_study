@@ -16,13 +16,15 @@ if __name__ == '__main__':
     stack = []
     visit = [False for _ in range(n + 1)]
     while True:
-        edge = input('edge=')  # edge v1->v2
+        edge = input('edge=')  # edge v1->v2, input format=v1 v2
         if edge == 'end':
             break
         v1, v2 = map(int, edge.split())  # edge v1->v2
         graph[v1].append(v2)
-    dfs(4)
+    start_vertex = int(input('start='))
+    dfs(start_vertex)
     for i in range(1, n + 1):
         if not visit[i]:
             dfs(i)
+    print(stack)
     print([alphabet[s] for s in stack])
